@@ -21,14 +21,12 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        // --- KODE TOPIK 1 (Pindah ke MainActivity2) ---
         val _btnExplisit1 = findViewById<Button>(R.id.btnExplisit1)
         _btnExplisit1.setOnClickListener {
             val intent = Intent(this@MainActivity, MainActivity2::class.java)
             startActivity(intent)
         }
 
-        // --- KODE TOPIK 2 (Kirim Data ke MainActivity3) ---
         val _dataKirim = findViewById<EditText>(R.id.dataKirim)
         val _btnExplisit2 = findViewById<Button>(R.id.btnExplisit2)
 
