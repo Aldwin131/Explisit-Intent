@@ -32,8 +32,21 @@ class MainActivity : AppCompatActivity() {
 
         _btnExplisit2.setOnClickListener {
             val intentWithData = Intent(this@MainActivity, MainActivity3::class.java).apply {
-                // MainActivity3.dataTerima diambil dari Companion Object di MainActivity3
                 putExtra(MainActivity3.dataTerima, _dataKirim.text.toString())
+            }
+            startActivity(intentWithData)
+        }
+
+        val _btnExplisit3 = findViewById<Button>(R.id.btnExplisit3)
+        _btnExplisit3.setOnClickListener {
+            val isiPegawai = Pegawai(
+                NIP = 1,
+                Nama = "Solman",
+                Dept = "Data Analyst"
+            )
+
+            val intentWithData = Intent(this@MainActivity, MainActivity4::class.java).apply {
+                putExtra(MainActivity4.dataPegawai, isiPegawai)
             }
             startActivity(intentWithData)
         }
