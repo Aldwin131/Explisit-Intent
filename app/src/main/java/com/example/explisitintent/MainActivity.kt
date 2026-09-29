@@ -39,11 +39,9 @@ class MainActivity : AppCompatActivity() {
 
         val _btnExplisit3 = findViewById<Button>(R.id.btnExplisit3)
         _btnExplisit3.setOnClickListener {
-            val isiPegawai = Pegawai(
-                NIP = 1,
-                Nama = "Solman",
-                Dept = "Data Analyst"
-            )
+            val isiPegawai: ArrayList<Pegawai> = arrayListOf()
+            isiPegawai.add(Pegawai(NIP = 1, Nama = "Anita", Dept = "Test"))
+            isiPegawai.add(Pegawai(NIP = 2, Nama = "Tatik", Dept = "Marketing"))
 
             val intentWithData = Intent(this@MainActivity, MainActivity4::class.java).apply {
                 putExtra(MainActivity4.dataPegawai, isiPegawai)
